@@ -6,7 +6,7 @@
 /*   By: mel-adna <mel-adna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 12:26:52 by mel-adna          #+#    #+#             */
-/*   Updated: 2025/01/26 13:01:32 by mel-adna         ###   ########.fr       */
+/*   Updated: 2025/01/26 19:27:40 by mel-adna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,15 +49,16 @@ void	validate_map(char **map, int i)
 int	main(int argc, char	**argv)
 {
 	t_game	game;
-	int		i;
 
 	if (argc != 2)
 		error_exit("Usage: ./so_long <map_file.ber>");
 	game.map = read_map(argv[1]);
 	validate_map(game.map, 0);
-	i = 0;
-	while (game.map[i])
-		printf("%s\n", game.map[i++]);
+	srand(time(NULL));
+	init_game(&game, argv[1]);
+	render_map(&game);
+	handle_events(&game);
+	mlx_loop(game.mlx);
 	free_map(game.map);
 	return (0);
 }

@@ -8,7 +8,7 @@ LIBFT_LIB   = $(LIBFT_DIR)/libft.a
 INCLUDES    = -I$(MLX_DIR) -I$(LIBFT_DIR)
 MLX_FLAGS   = -L$(MLX_DIR) -lmlx -framework OpenGL -framework AppKit
 SRC         = so_long.c gnl/get_next_line_bonus.c gnl/get_next_line_utils_bonus.c \
-			utils.c map_parser.c \
+			utils.c map_parser.c utils1.c \
 			
 OBJS        = $(SRC:.c=.o)
 
