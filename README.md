@@ -115,3 +115,7 @@ For further questions, refer to the **MiniLibX documentation** or ask in the **4
 
 Happy coding! 🚀
 
+
+https://github.com/user-attachments/assets/6f6cd2f3-085a-4b28-9414-843c04917d87
+
+---
